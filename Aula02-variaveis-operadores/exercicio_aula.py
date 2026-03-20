@@ -7,6 +7,6 @@ print(input(f'bem vindo,{nome}!'))
 dia = (input("Digite o dia do seu aniversário: "))
 mes = (input("Digite o mês do seu aniversário: "))
 ano = (input("Digite o ano do seu aniversário: "))
-print(input(f"Olá,{nome}! Você faz aniversário em {dia, mes, ano}!!"))
+print(input(f'Olá,{nome}! Você faz aniversário em {dia, mes, ano}!!'))
 
 
