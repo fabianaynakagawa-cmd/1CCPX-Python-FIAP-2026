@@ -1,35 +1,72 @@
-email = input('Digite aqui sua lista de emails (separado por vírgula): ')
-lista_emails = email.split(", ")
+partidas = (
+    ("Ana", 10),
+    ("Bruno", 7),
+    ("Carlos", 8),
+    ("Ana", 5),
+    ("Bruno", 10),
+    ("Carlos", 4),
+    ("Ana", -2)
+)
 
-usuario = []
-contagem_dominio = dict()
+'''pontos = {}
 
-for emails in lista_emails:
-    parte = emails.split('@')
-    dominio = parte[1]
+for jogador, valor in partidas:
+    if jogador not in pontos:
+        pontos[jogador] = 0
 
-    if dominio not in contagem_dominio:
-        contagem_dominio[dominio] = 1
+    pontos[jogador] += valor
+
+campeao = ""
+
+for jogador in pontos:
+    campeao = jogador
+
+print(campeao)'''
+
+'''pontos = {}
+
+for jogador, valor in partidas:
+    if jogador not in pontos:
+        pontos[jogador] = 0
+
+campeao = ""
+maior_pontuacao = None
+
+for jogador in pontos:
+    if maior_pontuacao is None or pontos[jogador] > maior_pontuacao:
+        maior_pontuacao = pontos[jogador]
+        campeao = jogador
+
+    print(campeao)'''
+
+
+'''pontos = {}
+
+for jogador, valor in partidas:
+    if jogador not in pontos:
+        pontos[jogador] = valor
     else:
-        contagem_dominio[dominio] += 1
+        pontos[jogador] = pontos[jogador] + valor
 
-    usuario.append(parte[0])
+campeao = ""
+maior_pontuacao = 0
 
-tuple_usuario = tuple(usuario)
+for jogador in pontos:
+    if pontos[jogador] >= maior_pontuacao:
+        maior_pontuacao = pontos[jogador]
+        campeao = jogador
 
-# Trocar primeiro e último usando a, b = b, a
-a = tuple_usuario[0]
-b = tuple_usuario[-1]
-a, b = b, a
+        print(campeao)'''
 
-# Reconstruindo a tupla com a troca aplicada
-lista_troca = list(tuple_usuario)
-lista_troca[0] = a
-lista_troca[-1] = b
-tupla_trocada = tuple(lista_troca)
 
-# Relatório final
-print('Relatório:')
-print(f'Quantidade de e-mails por domínio: {contagem_dominio}')
-print(f'Lista de usuários: {tuple_usuario}')
-print(f'Após troca de posições: {tupla_trocada}')
+pontos = {}
+
+for jogador, valor in partidas:
+    pontos[jogador] = valor
+
+campeao = ""
+
+for jogador in pontos:
+    if pontos[jogador] > pontos[campeao]:
+        campeao = jogador
+print(campeao)
